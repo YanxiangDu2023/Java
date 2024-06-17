@@ -1,6 +1,8 @@
-package test13;
+package test15;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable { //加了以后才具有写入的能力
     // 实例变量
     private int bNo;
     private String bName;
