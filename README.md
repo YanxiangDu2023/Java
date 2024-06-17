@@ -167,6 +167,9 @@ test13update.java includes explicit exception handling for file operations (IOEx
 
 In test13update.java, collection operations such as adding and removing books from the ArrayList are handled more effectively. For example, when removing a book, it avoids potential ConcurrentModificationException by correctly removing items from the collection.
 
+
+#### `test13` Class
+    
 package test15;
 import test15.Book;
 
@@ -185,7 +188,6 @@ import java.util.Scanner;
 // book number book name book author
 // 集合版的缺点：数据不能永久保存
 
-#### `test13update` Class
 public class test13update {
    
    
@@ -394,6 +396,12 @@ public class test13update {
     }
 
     
+
+
+
+    
+    
+
 
 
 
