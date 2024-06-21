@@ -1,12 +1,12 @@
-package test15;
+package test20;
 
-import java.io.Serializable;
-
-public class Book implements Serializable { //加了以后才具有写入的能力
+public class Book {
     // 实例变量
-    private int bNo;
-    private String bName;
-    private String bAuthor;
+    private int Id;
+    private String Name;
+    private String Author;
+    private double Price;
+    
 
     // 构造方法，带有方法参数
     // public Book(int bno, String bName, String bAuthor) {
@@ -17,35 +17,38 @@ public class Book implements Serializable { //加了以后才具有写入的能�
     // }
 
     // Getter和Setter方法
-    public int getBNo() {
-        return bNo;
+    public void setAuthor(String author) {
+        Author = author;
+    }
+    
+    public void setName(String name) {
+        Name = name;
     }
 
-    public void setBNo(int bNo) {
-        this.bNo = bNo;
+    public void setId(int id) {
+        Id = id;
     }
 
-    public String getBName() {
-        return bName;
+    public void setPrice(double price) {
+        Price = price;
     }
 
-    public void setBName(String bName) {
-        this.bName = bName;
+    public String getAuthor() {
+        return Author;
     }
 
-    public String getBAuthor() {
-        return bAuthor;
+    public int getId() {
+        return Id;
     }
 
-    public void setBAuthor(String bAuthor) {
-        this.bAuthor = bAuthor;
+    public String getName() {
+        return Name;
+    }
+    public double getPrice() {
+        return Price;
     }
 
-    public Book(int bNo, String bName, String bAuthor) {
-        this.bNo = bNo;
-        this.bName = bName;
-        this.bAuthor = bAuthor;
-    }
+
 
 
 
