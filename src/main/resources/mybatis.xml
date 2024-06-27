@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="db.properties"></properties>
+    <typeAliases>
+        <typeAlias type="pojo.Book" alias="b"></typeAlias>
+        <!--起别名b，方便使用 !-->
+        <package name="pojo"/> <!--起别名b，这样在<select id="selectAllBooks" resultType="Book">就可以直接写book了!-->
+
+    </typeAliases>
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!-- 把配置文件都提取出来 !-->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapper/BookMapper.xml"/>
+
+
+    </mappers>
+</configuration>
